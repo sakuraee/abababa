@@ -18,6 +18,6 @@ jobs:
           CI: true
       # 运行脚本
       - name: 运行脚本
-        run: node index.js
+        run: node ../index.js
         env:
           CI: true
