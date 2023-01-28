@@ -1,0 +1,20 @@
+name: 掘金自动签到
+on:
+  push:
+    branches: [main]
+jobs:
+  check_in:
+    runs-on: ubuntu-latest
+    steps:
+      # npm install
+      - name: npm install
+        run: |
+          npm install
+        env:
+          CI: true
+
+      # 运行脚本
+      - name: 运行脚本
+        run: node index.js
+        env:
+          CI: true
